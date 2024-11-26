@@ -50,6 +50,8 @@ function wp_architec_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'wp-architec' ),
+			'quick_link' => esc_html__( 'Quick Menu', 'wp-architec' ),
+			'support_menu' => esc_html__( 'Support Menu', 'wp-architec' ),
 		)
 	);
 

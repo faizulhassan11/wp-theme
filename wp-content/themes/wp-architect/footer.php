@@ -1,104 +1,134 @@
-  <!-- Main Footer -->
-  <footer class="main-footer" style="background-image: url(<?php echo get_template_directory_uri()?>/assets/images/background/5.jpg);">
-        <div class="auto-container">
-            <!--Widgets Section-->
-            <div class="widgets-section">
-                <div class="row">
-                    <!--Big Column-->
-                    <div class="big-column col-xl-7 col-lg-12 col-md-12 col-sm-12">
-                        <div class="row">
-                            <!--Footer Column-->
-                            <div class="footer-column col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                <div class="footer-widget about-widget">
+<!-- Main Footer -->
+<footer class="main-footer"
+    style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/background/5.jpg);">
+    <div class="auto-container">
+        <!--Widgets Section-->
+        <div class="widgets-section">
+            <div class="row">
+                <!--Big Column-->
+                <div class="big-column col-xl-7 col-lg-12 col-md-12 col-sm-12">
+                    <div class="row">
+                        <!--Footer Column-->
+                        <div class="footer-column col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="footer-widget about-widget">
+                                <?php
+                                // logo section
+                                $footer_logo = get_field('footer_logo', 'option');
+                                $footer_logo_url = wp_get_attachment_image_src($footer_logo, 'full');
+
+                                $footer_description = get_field('description', 'option');
+
+                                // Assuming $footer_logo_url[0] contains the URL of the logo image
+                                $footer_logo_id = attachment_url_to_postid($footer_logo_url[0]);
+                                $footer_logo_alt = get_post_meta($footer_logo_id, '_wp_attachment_image_alt', true);
+
+
+                                $footer_description = get_field('footer_description', 'option');
+
+                                // Contact Information
+                                $contact_information = get_field('contact_us', 'option');
+                                $address = $contact_information['address'];
+                                $email = $contact_information['email_address'];
+                                $number = $contact_information['contact_us'];
+                                 
+                                // copyright section
+                                $copyright_text = get_field('copyright_text', 'option');
+
+                                $social_links = get_field('social_links', 'option');
+                                $facebook = $social_links['facebook_link'];
+                                $instagram = $social_links['instagram_link'];
+                                ?>
+                                <?php if (!empty($footer_logo)): ?>
                                     <div class="footer-logo">
                                         <figure>
-                                            <a href="index-2.html"><img src="<?php echo get_template_directory_uri()?>/assets/images/footer-logo.png" alt=""></a>
+                                            <a href="<?php echo esc_url(home_url('/')); ?>">
+                                                <img src="<?php echo esc_url($footer_logo_url[0]); ?>"
+                                                    alt="<?php echo esc_attr($footer_logo_alt); ?>">
+                                            </a>
                                         </figure>
                                     </div>
+                                <?php endif; ?>
+                                <?php if (!empty($footer_description)): ?>
                                     <div class="widget-content">
-                                        <div class="text">Contra and layouts, in content of dummy text is nonsensical.typefaces of dummy text is appearance of different general the content of dummy text is nonsensical. typefaces of dummy text is nonsensical.</div>
+                                        <div class="text"><?php echo esc_html($footer_description); ?></div>
                                     </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+
+                        <!-- Footer Column -->
+
+
+                        <div class="footer-column col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="footer-widget links-widget quick_link">
+                                <h2 class="widget-title">Quick links</h2>
+                                <div class="widget-content">
+
+                                    <?php
+                                    wp_nav_menu(array(
+                                        'container' => false,
+                                        'menu' => 'quick_links',
+                                        'menu_class' => 'list',
+                                    ));
+                                    ?>
+
                                 </div>
                             </div>
-                            
-                            <!--Footer Column-->
-                            <div class="footer-column col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                <div class="footer-widget recent-posts">
-                                    <h2 class="widget-title">Recent Posts</h2>
-                                     <!--Footer Column-->
-                                    <div class="widget-content">
-                                        <div class="post">
-                                            <div class="thumb"><a href="blog-detail.html"><img src="<?php echo get_template_directory_uri()?>/assets/images/resource/post-thumb-1.jpg" alt=""></a></div>
-                                            <h4><a href="blog-detail.html">Triangle Concrete House on lake</a></h4>
-                                            <ul class="info">
-                                                <li>26 Aug</li>
-                                                <li>3 Comments</li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="post">
-                                            <div class="thumb"><a href="blog-detail.html"><img src="<?php echo get_template_directory_uri()?>/assets/images/resource/post-thumb-2.jpg" alt=""></a></div>
-                                            <h4><a href="blog-detail.html">The Amazing Interior for the Hotel art</a></h4>
-                                            <ul class="info">
-                                                <li>26 Aug</li>
-                                                <li>3 Comments</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>         
                         </div>
                     </div>
-                    
-                    <!--Big Column-->
-                    <div class="big-column col-xl-5 col-lg-12 col-md-12 col-sm-12">
-                        <div class="row clearfix">
-                            <div class="footer-column col-xl-5 col-lg-6 col-md-6 col-sm-12">
-                                 <div class="footer-widget links-widget">
-                                    <h2 class="widget-title">Useful links</h2>
-                                    <div class="widget-content">
-                                        <ul class="list">
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="services.html">Services</a></li>
-                                            <li><a href="projects.html">Project</a></li>
-                                            <li><a href="blog-classic.html">News</a></li>
-                                            <li><a href="contact.html">Contact Us</a></li>
-                                        </ul>
-                                    </div>
+                </div>
+
+                <!--Big Column-->
+                <div class="big-column col-xl-5 col-lg-12 col-md-12 col-sm-12">
+                    <div class="row clearfix">
+                        <div class="footer-column col-xl-5 col-lg-6 col-md-6 col-sm-12">
+                            <div class="footer-widget links-widget">
+                                <h2 class="widget-title">Useful links</h2>
+                                <div class="widget-content">
+
+                                    <?php
+                                    wp_nav_menu(array(
+                                        'container' => false,
+                                        'menu' => 'suppot_menu',
+                                        'menu_class' => 'list',
+                                    ));
+                                    ?>
+
                                 </div>
                             </div>
+                        </div>
 
-                            <!--Footer Column-->
-                            <div class="footer-column col-xl-7 col-lg-6 col-md-6 col-sm-12">
-                                <div class="footer-widget gallery-widget">
-                                    <h2 class="widget-title">Recent Works</h2>
-                                    <div class="widget-content">
-                                        <div class="outer clearfix">
-                                            <figure class="image">
-                                                <a href="<?php echo get_template_directory_uri()?>/assets/images/gallery/1.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/work-thumb-1.jpg" alt=""></a>
-                                            </figure>
-
-                                            <figure class="image">
-                                                <a href="<?php echo get_template_directory_uri()?>/assets/images/gallery/2.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/work-thumb-2.jpg" alt=""></a>
-                                            </figure>
-
-                                            <figure class="image">
-                                                <a href="<?php echo get_template_directory_uri()?>/assets/images/gallery/3.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/work-thumb-3.jpg" alt=""></a>
-                                            </figure>
-
-                                            <figure class="image">
-                                                <a href="<?php echo get_template_directory_uri()?>/assets/images/gallery/4.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/work-thumb-4.jpg" alt=""></a>
-                                            </figure>
-
-                                            <figure class="image">
-                                                <a href="<?php echo get_template_directory_uri()?>/assets/images/gallery/5.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/work-thumb-5.jpg" alt=""></a>
-                                            </figure>
-
-                                            <figure class="image">
-                                                <a href="<?php echo get_template_directory_uri()?>/assets/images/gallery/1.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/work-thumb-6.jpg" alt=""></a>
-                                            </figure>
-                                        </div>
-                                    </div>       
+                        <!--Footer Column-->
+                        <div class="footer-column col-xl-7 col-lg-6 col-md-6 col-sm-12">
+                            <div class="footer-widget gallery-widget">
+                                <h2 class="widget-title">Contact Us</h2>
+                                <div class="widget-content">
+                                    <ul>
+                                        <li>
+                                            <div class="icon">
+                                                <i class="fa fa-envelope-o"></i>
+                                            </div>
+                                            <div class="cont">
+                                                <p><?php echo $email ?></p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <i class="fa fa-phone"></i>
+                                            </div>
+                                            <div class="cont">
+                                                <p><?php echo $number ?></p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <i class="fa fa-home"></i>
+                                            </div>
+                                            <div class="cont">
+                                                <p><?php echo $address ?></p>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -106,40 +136,38 @@
                 </div>
             </div>
         </div>
-        
-        <!--Footer Bottom-->
-        <div class="footer-bottom">
-            <div class="auto-container">
-                <div class="inner-container clearfix">
-                    <div class="social-links">
-                        <ul class="social-icon-two">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="copyright-text">
-                    
-                    </div>
+    </div>
+
+    <!--Footer Bottom-->
+    <div class="footer-bottom">
+        <div class="auto-container">
+            <div class="inner-container clearfix">
+                <div class="social-links">
+                    <ul class="social-icon-two">
+                        <li><a href="<?php echo $facebook ?>"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="<?php echo $instagram ?>"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="copyright-text">
+                    <!-- Add your copyright text here -->
+                    <a href="" target="_blank"><?php echo $copyright_text ?></a>
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- End Main Footer -->
+    </div>
+</footer>
+<!-- End Main Footer -->
 
 </div>
-
-
 
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-o-up"></span></div>
 
-
 </body>
-<?php wp_footer();
- ?>
+<?php wp_footer(); ?>
 
 </html>

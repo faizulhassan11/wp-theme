@@ -41,14 +41,21 @@
         </div>
     </div>
 
-    <div class="bottom-box">
+    <?php 
+    $header_number = get_field('phone_number','option');
+    $header_email = get_field('email_address','option');
+    ?>
+
+    <?php if(!empty($header_number) || !empty($header_email)): ?>
+        <div class="bottom-box">
         <div class="auto-container clearfix">
             <ul class="contact-info">
-                <li><span>Phone :</span> (+84) 867-557-243</li>
-                <li><span>EMAIL :</span> <a href="mailto:support@yourdomain.com">Support@yourdomain.com</a></li>
+                <li><span>Phone :</span> <?php echo $header_number; ?></li>
+                <li><span>EMAIL :</span> <a href="mailto:support@yourdomain.com"><?php echo $header_email; ?></a></li>
             </ul>
         </div>
     </div>
+    <?php endif; ?>
 </section>
 <!-- End Banner Section -->
 

@@ -9403,6 +9403,8 @@ header-style-seven .nav-toggler:hover{
 	font-weight: 400;
 }
 
+
+
 /*Recent Posts*/
 
 .recent-posts{
@@ -9624,6 +9626,17 @@ header-style-seven .nav-toggler:hover{
 	transform: scale(1);
 }
 
+
+.main-footer .gallery-widget .widget-content li .icon {
+    margin-right: 10px;
+    color: #ff8a00; /* Orange color */
+}
+
+.main-footer .gallery-widget .widget-content li .cont p {
+    margin: 0;
+    color: #f4f4f4; /* Text color */
+}
+
 /*=== Footer Bottom ===*/
 
 .main-footer .footer-bottom{
@@ -9716,6 +9729,9 @@ header-style-seven .nav-toggler:hover{
 .social-icon-two li a:hover{
 	color: #ff8a00;
 }
+
+
+
 
 /***
 
