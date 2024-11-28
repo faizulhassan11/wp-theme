@@ -207,6 +207,6 @@ if( function_exists('acf_add_options_page') ) {
         'redirect'      => false
     ));
 
- 
-
 }
+
+require_once('custom-post-type/project-post-type.php');

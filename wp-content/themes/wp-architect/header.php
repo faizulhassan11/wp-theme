@@ -24,6 +24,19 @@
         <!-- Preloader -->
         <div class="preloader"></div>
 
+        <?php 
+         $header_logo = get_field('header_logo','option');
+        // $logo_url = wp_get_attachment_image_src($header_logo,'full');
+        //  echo "logoarray";
+       
+        //  print_r($header_logo);
+         
+        //  print_r($header_logo_url);
+         
+     
+        
+        ?>
+
         <!-- Main Header-->
         <header class="main-header header-style-one">
             <div class="auto-container">
@@ -31,7 +44,7 @@
                     <div class="main-box clearfix">
                         <div class="logo-box">
                             <div class="logo"><a href="index-2.html"><img
-                                        src="<?php echo get_template_directory_uri()?>/assets/images/logo-2.png" alt=""
+                                        src="<?php echo $header_logo['url'] ?>" alt=""
                                         title=""></a>
                             </div>
                         </div>
