@@ -1,66 +1,62 @@
 <?php /* Template Name: Home */ ?>
 
 <?php get_header(); ?>
-<!-- Banner Section -->
+
+
+<!-- Bnner Section -->
 <section class="banner-section">
     <div class="banner-carousel owl-carousel owl-theme">
-        <div class="slide-item" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/main-slider/image-1.jpg);">
+        <div class="slide-item" style="background-image: url(images/main-slider/image-1.jpg);">
             <div class="auto-container">
                 <div class="content-box">
                     <h2>Architecture is a <br> Visual Art.</h2>
                     <div class="text">The buildings speak for themselves</div>
                     <div class="link-box">
-                        <a href="<?php echo esc_url(home_url('/about')); ?>" class="theme-btn btn-style-one">Check Art</a>
+                        <a href="about.html" class="theme-btn btn-style-one">Check Art</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="slide-item" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/main-slider/image-2.jpg);">
+        <div class="slide-item" style="background-image: url(images/main-slider/image-2.jpg);">
             <div class="auto-container">
                 <div class="content-box">
                     <h2>Architecture is a <br> Visual Art.</h2>
                     <div class="text">The buildings speak for themselves</div>
                     <div class="link-box">
-                        <a href="<?php echo esc_url(home_url('/about')); ?>" class="theme-btn btn-style-one">Check Art</a>
+                        <a href="about.html" class="theme-btn btn-style-one">Check Art</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="slide-item" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/main-slider/image-3.jpg);">
+        <div class="slide-item"
+            style="background-image: url(<?php echo get_template_directory_uri()?>/assets/images/main-slider/image-3.jpg);">
             <div class="auto-container">
                 <div class="content-box">
                     <h2>Architecture is a <br> Visual Art.</h2>
                     <div class="text">The buildings speak for themselves</div>
                     <div class="link-box">
-                        <a href="<?php echo esc_url(home_url('/about')); ?>" class="theme-btn btn-style-one">Check Art</a>
+                        <a href="about.html" class="theme-btn btn-style-one">Check Art</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <?php 
-    $header_number = get_field('phone_number','option');
-    $header_email = get_field('email_address','option');
-    ?>
-
-    <?php if(!empty($header_number) || !empty($header_email)): ?>
-        <div class="bottom-box">
+    <div class="bottom-box">
         <div class="auto-container clearfix">
             <ul class="contact-info">
-                <li><span>Phone :</span> <?php echo $header_number; ?></li>
-                <li><span>EMAIL :</span> <a href="mailto:support@yourdomain.com"><?php echo $header_email; ?></a></li>
+                <li><span>Phone :</span> (+84) 867-557-243</li>
+                <li><span>EMAIL :</span> <a href="#">Support@yourdomain.com</a></li>
             </ul>
         </div>
     </div>
-    <?php endif; ?>
 </section>
-<!-- End Banner Section -->
+<!-- End Bnner Section -->
 
 <!-- About Section -->
-<section class="about-section" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/background/1.jpg);">
+<section class="about-section" style="background-image: url(images/background/1.jpg);">
     <div class="auto-container">
         <div class="row no-gutters">
             <!-- Image Column -->
@@ -70,8 +66,12 @@
                         <h2>ABOUT <br> US</h2>
                     </div>
                     <div class="image-box">
-                        <figure class="alphabet-img wow fadeInRight"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/alphabet-image.png" alt=""></figure>
-                        <figure class="image wow fadeInRight" data-wow-delay='600ms'><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/image-1.jpg" alt=""></figure>
+                        <figure class="alphabet-img wow fadeInRight"><img
+                                src="<?php echo get_template_directory_uri()?>/assets/images/resource/alphabet-image.png"
+                                alt=""></figure>
+                        <figure class="image wow fadeInRight" data-wow-delay='600ms'><img
+                                src="<?php echo get_template_directory_uri()?>/assets/images/resource/image-1.jpg"
+                                alt=""></figure>
                     </div>
                 </div>
             </div>
@@ -83,8 +83,12 @@
                         <div class="title">
                             <h2>Any Complexity <br>For Any Cat</h2>
                         </div>
-                        <div class="text">Our company has many years of experience and specializes in manufacturing, selling, servicing, and repairing cardan shafts (cardans) for various vehicles, technological equipment, tractors, special machinery, and agricultural machinery of various domestic and foreign manufacturers.</div>
-                        <div class="link-box"><a href="<?php echo esc_url(home_url('/about')); ?>" class="theme-btn btn-style-one">About Us</a></div>
+                        <div class="text">Our company has many years experience and specializes in manufacturing,
+                            salling, serviceing and repairing cardan shafts (cardans) for various vehicles,
+                            technological equipment, tractor, special machinery and agricultural machinery of
+                            verious domestic and foreign manufacturers.</div>
+                        <div class="link-box"><a href="about.html" class="theme-btn btn-style-one">About Us</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,7 +99,7 @@
 
 <!-- Services Section -->
 <section class="services-section">
-    <div class="upper-box" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/background/2.jpg);">
+    <div class="upper-box" style="background-image: url(images/background/2.jpg);">
         <div class="auto-container">
             <div class="sec-title text-center light">
                 <span class="float-text">Specialization</span>
@@ -111,13 +115,16 @@
                 <div class="service-block">
                     <div class="inner-box">
                         <div class="image-box">
-                            <figure class="image"><a href="<?php echo esc_url(home_url('/service-detail')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/service-1.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="service-detail.html"><img
+                                        src="<?php echo get_template_directory_uri()?>/assets/images/resource/service-1.jpg"
+                                        alt=""></a></figure>
                         </div>
                         <div class="lower-content">
-                            <h3><a href="<?php echo esc_url(home_url('/service-detail')); ?>">Architectural Design</a></h3>
-                            <div class="text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they.</div>
+                            <h3><a href="service-detail.html">Architectural Design</a></h3>
+                            <div class="text">Far far away, behind the word mountains, far from the countries
+                                Vokalia and Consonantia, there live the blind texts. Separated they.</div>
                             <div class="link-box">
-                                <a href="<?php echo esc_url(home_url('/service-detail')); ?>">Learn More <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="service-detail.html">Lorn More <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -127,13 +134,16 @@
                 <div class="service-block">
                     <div class="inner-box">
                         <div class="image-box">
-                            <figure class="image"><a href="<?php echo esc_url(home_url('/service-detail')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/service-2.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="service-detail.html"><img
+                                        src="<?php echo get_template_directory_uri()?>/assets/images/resource/service-2.jpg"
+                                        alt=""></a></figure>
                         </div>
                         <div class="lower-content">
-                            <h3><a href="<?php echo esc_url(home_url('/service-detail')); ?>">Interior Design</a></h3>
-                            <div class="text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they.</div>
+                            <h3><a href="service-detail.html">Interior Design</a></h3>
+                            <div class="text">Far far away, behind the word mountains, far from the countries
+                                Vokalia and Consonantia, there live the blind texts. Separated they.</div>
                             <div class="link-box">
-                                <a href="<?php echo esc_url(home_url('/service-detail')); ?>">Learn More <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="service-detail.html">Lorn More <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -143,13 +153,16 @@
                 <div class="service-block">
                     <div class="inner-box">
                         <div class="image-box">
-                            <figure class="image"><a href="<?php echo esc_url(home_url('/service-detail')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/service-3.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="service-detail.html"><img
+                                        src="<?php echo get_template_directory_uri()?>/assets/images/resource/service-3.jpg"
+                                        alt=""></a></figure>
                         </div>
                         <div class="lower-content">
-                            <h3><a href="<?php echo esc_url(home_url('/service-detail')); ?>">Corporate Design</a></h3>
-                            <div class="text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they.</div>
+                            <h3><a href="service-detail.html">Corporate Design</a></h3>
+                            <div class="text">Far far away, behind the word mountains, far from the countries
+                                Vokalia and Consonantia, there live the blind texts. Separated they.</div>
                             <div class="link-box">
-                                <a href="<?php echo esc_url(home_url('/service-detail')); ?>">Learn More <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="service-detail.html">Lorn More <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -159,13 +172,16 @@
                 <div class="service-block">
                     <div class="inner-box">
                         <div class="image-box">
-                            <figure class="image"><a href="<?php echo esc_url(home_url('/service-detail')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/service-1.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="service-detail.html"><img
+                                        src="<?php echo get_template_directory_uri()?>/assets/images/resource/service-1.jpg"
+                                        alt=""></a></figure>
                         </div>
                         <div class="lower-content">
-                            <h3><a href="<?php echo esc_url(home_url('/service-detail')); ?>">Architectural Design</a></h3>
-                            <div class="text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they.</div>
+                            <h3><a href="service-detail.html">Architectural Design</a></h3>
+                            <div class="text">Far far away, behind the word mountains, far from the countries
+                                Vokalia and Consonantia, there live the blind texts. Separated they.</div>
                             <div class="link-box">
-                                <a href="<?php echo esc_url(home_url('/service-detail')); ?>">Learn More <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="service-detail.html">Lorn More <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -175,13 +191,16 @@
                 <div class="service-block">
                     <div class="inner-box">
                         <div class="image-box">
-                            <figure class="image"><a href="<?php echo esc_url(home_url('/service-detail')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/service-2.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="service-detail.html"><img
+                                        src="<?php echo get_template_directory_uri()?>/assets/images/resource/service-2.jpg"
+                                        alt=""></a></figure>
                         </div>
                         <div class="lower-content">
-                            <h3><a href="<?php echo esc_url(home_url('/service-detail')); ?>">Interior Design</a></h3>
-                            <div class="text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they.</div>
+                            <h3><a href="service-detail.html">Interior Design</a></h3>
+                            <div class="text">Far far away, behind the word mountains, far from the countries
+                                Vokalia and Consonantia, there live the blind texts. Separated they.</div>
                             <div class="link-box">
-                                <a href="<?php echo esc_url(home_url('/service-detail')); ?>">Learn More <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="service-detail.html">Lorn More <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -191,13 +210,16 @@
                 <div class="service-block">
                     <div class="inner-box">
                         <div class="image-box">
-                            <figure class="image"><a href="<?php echo esc_url(home_url('/service-detail')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/service-3.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="service-detail.html"><img
+                                        src="<?php echo get_template_directory_uri()?>/assets/images/resource/service-3.jpg"
+                                        alt=""></a></figure>
                         </div>
                         <div class="lower-content">
-                            <h3><a href="<?php echo esc_url(home_url('/service-detail')); ?>">Corporate Design</a></h3>
-                            <div class="text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they.</div>
+                            <h3><a href="service-detail.html">Corporate Design</a></h3>
+                            <div class="text">Far far away, behind the word mountains, far from the countries
+                                Vokalia and Consonantia, there live the blind texts. Separated they.</div>
                             <div class="link-box">
-                                <a href="<?php echo esc_url(home_url('/service-detail')); ?>">Learn More <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="service-detail.html">Lorn More <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -207,13 +229,16 @@
                 <div class="service-block">
                     <div class="inner-box">
                         <div class="image-box">
-                            <figure class="image"><a href="<?php echo esc_url(home_url('/service-detail')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/service-1.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="service-detail.html"><img
+                                        src="<?php echo get_template_directory_uri()?>/assets/images/resource/service-1.jpg"
+                                        alt=""></a></figure>
                         </div>
                         <div class="lower-content">
-                            <h3><a href="<?php echo esc_url(home_url('/service-detail')); ?>">Architectural Design</a></h3>
-                            <div class="text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they.</div>
+                            <h3><a href="service-detail.html">Architectural Design</a></h3>
+                            <div class="text">Far far away, behind the word mountains, far from the countries
+                                Vokalia and Consonantia, there live the blind texts. Separated they.</div>
                             <div class="link-box">
-                                <a href="<?php echo esc_url(home_url('/service-detail')); ?>">Learn More <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="service-detail.html">Lorn More <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -223,13 +248,16 @@
                 <div class="service-block">
                     <div class="inner-box">
                         <div class="image-box">
-                            <figure class="image"><a href="<?php echo esc_url(home_url('/service-detail')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/service-2.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="service-detail.html"><img
+                                        src="<?php echo get_template_directory_uri()?>/assets/images/resource/service-2.jpg"
+                                        alt=""></a></figure>
                         </div>
                         <div class="lower-content">
-                            <h3><a href="<?php echo esc_url(home_url('/service-detail')); ?>">Interior Design</a></h3>
-                            <div class="text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they.</div>
+                            <h3><a href="service-detail.html">Interior Design</a></h3>
+                            <div class="text">Far far away, behind the word mountains, far from the countries
+                                Vokalia and Consonantia, there live the blind texts. Separated they.</div>
                             <div class="link-box">
-                                <a href="<?php echo esc_url(home_url('/service-detail')); ?>">Learn More <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="service-detail.html">Lorn More <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -239,13 +267,16 @@
                 <div class="service-block">
                     <div class="inner-box">
                         <div class="image-box">
-                            <figure class="image"><a href="<?php echo esc_url(home_url('/service-detail')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/service-3.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="service-detail.html"><img
+                                        src="<?php echo get_template_directory_uri()?>/assets/images/resource/service-3.jpg"
+                                        alt=""></a></figure>
                         </div>
                         <div class="lower-content">
-                            <h3><a href="<?php echo esc_url(home_url('/service-detail')); ?>">Corporate Design</a></h3>
-                            <div class="text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they.</div>
+                            <h3><a href="service-detail.html">Corporate Design</a></h3>
+                            <div class="text">Far far away, behind the word mountains, far from the countries
+                                Vokalia and Consonantia, there live the blind texts. Separated they.</div>
                             <div class="link-box">
-                                <a href="<?php echo esc_url(home_url('/service-detail')); ?>">Learn More <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="service-detail.html">Lorn More <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -258,14 +289,16 @@
 
 <!-- Fun Fact Section -->
 <section class="fun-fact-section">
-    <div class="outer-box" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/background/3.jpg);">
+    <div class="outer-box"
+        style="background-image: url(<?php echo get_template_directory_uri()?>/assets/images/background/3.jpg);">
         <div class="auto-container">
             <div class="fact-counter">
                 <div class="row">
                     <!--Column-->
                     <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                         <div class="count-box">
-                            <div class="count"><span class="count-text" data-speed="5000" data-stop="14">0</span></div>
+                            <div class="count"><span class="count-text" data-speed="5000" data-stop="14">0</span>
+                            </div>
                             <h4 class="counter-title">Years of <br>Experience</h4>
                         </div>
                     </div>
@@ -273,7 +306,8 @@
                     <!--Column-->
                     <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
                         <div class="count-box">
-                            <div class="count"><span class="count-text" data-speed="5000" data-stop="237">0</span></div>
+                            <div class="count"><span class="count-text" data-speed="5000" data-stop="237">0</span>
+                            </div>
                             <h4 class="counter-title">Project <br>Taken</h4>
                         </div>
                     </div>
@@ -281,7 +315,8 @@
                     <!--Column-->
                     <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
                         <div class="count-box">
-                            <div class="count"><span class="count-text" data-speed="5000" data-stop="11">0</span>K</div>
+                            <div class="count"><span class="count-text" data-speed="5000" data-stop="11">0</span>K
+                            </div>
                             <h4 class="counter-title">Twitter <br> Follower</h4>
                         </div>
                     </div>
@@ -289,7 +324,8 @@
                     <!--Column-->
                     <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1200ms">
                         <div class="count-box">
-                            <div class="count"><span class="count-text" data-speed="5000" data-stop="12">0</span></div>
+                            <div class="count"><span class="count-text" data-speed="5000" data-stop="12">0</span>
+                            </div>
                             <h4 class="counter-title">Awards<br>won</h4>
                         </div>
                     </div>
@@ -314,12 +350,14 @@
             <!-- Project Block -->
             <div class="project-block">
                 <div class="image-box">
-                    <figure class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/1.jpg" alt=""></figure>
+                    <figure class="image"><img
+                            src="<?php echo get_template_directory_uri()?>/assets/images/gallery/1.jpg" alt=""></figure>
                     <div class="overlay-box">
-                        <h4><a href="<?php echo esc_url(home_url('/project-detail')); ?>">Luxury Home <br>Project</a></h4>
+                        <h4><a href="project-detail.html">Laxury Home <br>Project</a></h4>
                         <div class="btn-box">
-                            <a href="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
-                            <a href="<?php echo esc_url(home_url('/project-detail')); ?>"><i class="fa fa-external-link"></i></a>
+                            <a href="images/gallery/1.jpg" class="lightbox-image" data-fancybox="gallery"><i
+                                    class="fa fa-search"></i></a>
+                            <a href="project-detail.html"><i class="fa fa-external-link"></i></a>
                         </div>
                         <span class="tag">Architecture</span>
                     </div>
@@ -329,12 +367,14 @@
             <!-- Project Block -->
             <div class="project-block">
                 <div class="image-box">
-                    <figure class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/2.jpg" alt=""></figure>
+                    <figure class="image"><img
+                            src="<?php echo get_template_directory_uri()?>/assets/images/gallery/2.jpg" alt=""></figure>
                     <div class="overlay-box">
-                        <h4><a href="<?php echo esc_url(home_url('/project-detail')); ?>">Luxury Home <br>Project</a></h4>
+                        <h4><a href="project-detail.html">Laxury Home <br>Project</a></h4>
                         <div class="btn-box">
-                            <a href="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
-                            <a href="<?php echo esc_url(home_url('/project-detail')); ?>"><i class="fa fa-external-link"></i></a>
+                            <a href="images/gallery/2.jpg" class="lightbox-image" data-fancybox="gallery"><i
+                                    class="fa fa-search"></i></a>
+                            <a href="project-detail.html"><i class="fa fa-external-link"></i></a>
                         </div>
                         <span class="tag">Architecture</span>
                     </div>
@@ -344,12 +384,14 @@
             <!-- Project Block -->
             <div class="project-block">
                 <div class="image-box">
-                    <figure class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/3.jpg" alt=""></figure>
+                    <figure class="image"><img
+                            src="<?php echo get_template_directory_uri()?>/assets/images/gallery/3.jpg" alt=""></figure>
                     <div class="overlay-box">
-                        <h4><a href="<?php echo esc_url(home_url('/project-detail')); ?>">Luxury Home <br>Project</a></h4>
+                        <h4><a href="project-detail.html">Laxury Home <br>Project</a></h4>
                         <div class="btn-box">
-                            <a href="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
-                            <a href="<?php echo esc_url(home_url('/project-detail')); ?>"><i class="fa fa-external-link"></i></a>
+                            <a href="images/gallery/3.jpg" class="lightbox-image" data-fancybox="gallery"><i
+                                    class="fa fa-search"></i></a>
+                            <a href="project-detail.html"><i class="fa fa-external-link"></i></a>
                         </div>
                         <span class="tag">Architecture</span>
                     </div>
@@ -359,12 +401,14 @@
             <!-- Project Block -->
             <div class="project-block">
                 <div class="image-box">
-                    <figure class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/4.jpg" alt=""></figure>
+                    <figure class="image"><img
+                            src="<?php echo get_template_directory_uri()?>/assets/images/gallery/4.jpg" alt=""></figure>
                     <div class="overlay-box">
-                        <h4><a href="<?php echo esc_url(home_url('/project-detail')); ?>">Luxury Home <br>Project</a></h4>
+                        <h4><a href="project-detail.html">Laxury Home <br>Project</a></h4>
                         <div class="btn-box">
-                            <a href="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/4.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
-                            <a href="<?php echo esc_url(home_url('/project-detail')); ?>"><i class="fa fa-external-link"></i></a>
+                            <a href="images/gallery/4.jpg" class="lightbox-image" data-fancybox="gallery"><i
+                                    class="fa fa-search"></i></a>
+                            <a href="project-detail.html"><i class="fa fa-external-link"></i></a>
                         </div>
                         <span class="tag">Architecture</span>
                     </div>
@@ -374,12 +418,14 @@
             <!-- Project Block -->
             <div class="project-block">
                 <div class="image-box">
-                    <figure class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/5.jpg" alt=""></figure>
+                    <figure class="image"><img
+                            src="<?php echo get_template_directory_uri()?>/assets/images/gallery/5.jpg" alt=""></figure>
                     <div class="overlay-box">
-                        <h4><a href="<?php echo esc_url(home_url('/project-detail')); ?>">Luxury Home <br>Project</a></h4>
+                        <h4><a href="project-detail.html">Laxury Home <br>Project</a></h4>
                         <div class="btn-box">
-                            <a href="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/5.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
-                            <a href="<?php echo esc_url(home_url('/project-detail')); ?>"><i class="fa fa-external-link"></i></a>
+                            <a href="images/gallery/5.jpg" class="lightbox-image" data-fancybox="gallery"><i
+                                    class="fa fa-search"></i></a>
+                            <a href="project-detail.html"><i class="fa fa-external-link"></i></a>
                         </div>
                         <span class="tag">Architecture</span>
                     </div>
@@ -389,12 +435,14 @@
             <!-- Project Block -->
             <div class="project-block">
                 <div class="image-box">
-                    <figure class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/3.jpg" alt=""></figure>
+                    <figure class="image"><img
+                            src="<?php echo get_template_directory_uri()?>/assets/images/gallery/3.jpg" alt=""></figure>
                     <div class="overlay-box">
-                        <h4><a href="<?php echo esc_url(home_url('/project-detail')); ?>">Luxury Home <br>Project</a></h4>
+                        <h4><a href="project-detail.html">Laxury Home <br>Project</a></h4>
                         <div class="btn-box">
-                            <a href="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
-                            <a href="<?php echo esc_url(home_url('/project-detail')); ?>"><i class="fa fa-external-link"></i></a>
+                            <a href="images/gallery/3.jpg" class="lightbox-image" data-fancybox="gallery"><i
+                                    class="fa fa-search"></i></a>
+                            <a href="project-detail.html"><i class="fa fa-external-link"></i></a>
                         </div>
                         <span class="tag">Architecture</span>
                     </div>
@@ -410,7 +458,7 @@
     <div class="auto-container">
         <div class="sec-title text-center">
             <span class="title">Our Team</span>
-            <h2>Professional Experts</h2>
+            <h2>Profect Expert</h2>
         </div>
 
         <div class="row clearfix">
@@ -418,7 +466,10 @@
             <div class="team-block col-lg-4 col-md-6 col-sm-12">
                 <div class="inner-box">
                     <div class="image-box">
-                        <div class="image"><a href="<?php echo esc_url(home_url('/team')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/team-1.jpg" alt=""></a></div>
+                        <div class="image"><a href="team.html"><img
+                                    src="<?php echo get_template_directory_uri()?>/assets/images/resource/team-1.jpg"
+                                    alt=""></a>
+                        </div>
                         <ul class="social-links">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -426,7 +477,7 @@
                             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                             <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
                         </ul>
-                        <h3 class="name"><a href="<?php echo esc_url(home_url('/team')); ?>">Scott Grey</a></h3>
+                        <h3 class="name"><a href="team.html">Scott Grey</a></h3>
                     </div>
                     <span class="designation">Architect</span>
                 </div>
@@ -436,7 +487,10 @@
             <div class="team-block col-lg-4 col-md-6 col-sm-12">
                 <div class="inner-box">
                     <div class="image-box">
-                        <div class="image"><a href="<?php echo esc_url(home_url('/team')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/team-2.jpg" alt=""></a></div>
+                        <div class="image"><a href="team.html"><img
+                                    src="<?php echo get_template_directory_uri()?>/assets/images/resource/team-2.jpg"
+                                    alt=""></a>
+                        </div>
                         <ul class="social-links">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -444,7 +498,7 @@
                             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                             <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
                         </ul>
-                        <h3 class="name"><a href="<?php echo esc_url(home_url('/team')); ?>">Russel Reed</a></h3>
+                        <h3 class="name"><a href="team.html">Russel Reed</a></h3>
                     </div>
                     <span class="designation">Project Manager</span>
                 </div>
@@ -454,7 +508,10 @@
             <div class="team-block col-lg-4 col-md-6 col-sm-12">
                 <div class="inner-box">
                     <div class="image-box">
-                        <div class="image"><a href="<?php echo esc_url(home_url('/team')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/team-3.jpg" alt=""></a></div>
+                        <div class="image"><a href="team.html"><img
+                                    src="<?php echo get_template_directory_uri()?>/assets/images/resource/team-3.jpg"
+                                    alt=""></a>
+                        </div>
                         <ul class="social-links">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -462,11 +519,12 @@
                             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                             <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
                         </ul>
-                        <h3 class="name"><a href="<?php echo esc_url(home_url('/team')); ?>">Cheryl Ray</a></h3>
+                        <h3 class="name"><a href="team.html">Cheryl Ray</a></h3>
                     </div>
                     <span class="designation">Interior Designer</span>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
@@ -480,21 +538,26 @@
             <div class="inner-column">
                 <div class="sec-title">
                     <span class="float-text">testimonial</span>
-                    <h2>What Clients Say</h2>
+                    <h2>What Client Says</h2>
                 </div>
-                <div class="text">Looking at its layout. The point of using very perfectly is that it has a more-or-less normal distribution of letters, as opposed</div>
+                <div class="text">Looking at its layout. The point of using very profectly is that it has a
+                    more-or-less normal distribution of letters, as opposed</div>
             </div>
         </div>
 
         <!-- Testimonial Column -->
-        <div class="testimonial-column clearfix" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/background/4.jpg);">
+        <div class="testimonial-column clearfix" style="background-image: url(images/background/4.jpg);">
             <div class="inner-column">
                 <div class="testimonial-carousel owl-carousel owl-theme">
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="inner-box">
-                            <div class="image-box"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/thumb-1.jpg" alt=""></div>
-                            <div class="text">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</div>
+                            <div class="image-box"><img
+                                    src="<?php echo get_template_directory_uri()?>/assets/images/resource/thumb-1.jpg"
+                                    alt=""></div>
+                            <div class="text">A wonderful serenity has taken possession of my entire soul, like
+                                these sweet mornings of spring which I enjoy with my whole heart. I am alone, and
+                                feel the charm of existence in this spot.</div>
                             <div class="info-box">
                                 <h4 class="name">Jane Smith</h4>
                                 <span class="designation">CEO, InDesign</span>
@@ -505,8 +568,12 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="inner-box">
-                            <div class="image-box"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/thumb-1.jpg" alt=""></div>
-                            <div class="text">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</div>
+                            <div class="image-box"><img
+                                    src="<?php echo get_template_directory_uri()?>/assets/images/resource/thumb-1.jpg"
+                                    alt=""></div>
+                            <div class="text">A wonderful serenity has taken possession of my entire soul, like
+                                these sweet mornings of spring which I enjoy with my whole heart. I am alone, and
+                                feel the charm of existence in this spot.</div>
                             <div class="info-box">
                                 <h4 class="name">Jane Smith</h4>
                                 <span class="designation">CEO, InDesign</span>
@@ -517,8 +584,12 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="inner-box">
-                            <div class="image-box"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/thumb-1.jpg" alt=""></div>
-                            <div class="text">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</div>
+                            <div class="image-box"><img
+                                    src="<?php echo get_template_directory_uri()?>/assets/images/resource/thumb-1.jpg"
+                                    alt=""></div>
+                            <div class="text">A wonderful serenity has taken possession of my entire soul, like
+                                these sweet mornings of spring which I enjoy with my whole heart. I am alone, and
+                                feel the charm of existence in this spot.</div>
                             <div class="info-box">
                                 <h4 class="name">Jane Smith</h4>
                                 <span class="designation">CEO, InDesign</span>
@@ -537,18 +608,20 @@
     <div class="auto-container">
         <div class="sec-title">
             <span class="float-text">Blogs</span>
-            <h2>News & Articles</h2>
+            <h2>News & Articals</h2>
         </div>
         <div class="row">
             <!-- News Block -->
             <div class="news-block col-lg-4 col-md-6 col-sm-12">
                 <div class="inner-box">
                     <div class="image-box">
-                        <figure class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/news-1.jpg" alt=""></figure>
-                        <div class="overlay-box"><a href="<?php echo esc_url(home_url('/blog-detail')); ?>"><i class="fa fa-link"></i></a></div>
+                        <figure class="image"><img
+                                src="<?php echo get_template_directory_uri()?>/assets/images/resource/news-1.jpg"
+                                alt=""></figure>
+                        <div class="overlay-box"><a href="blog-detail.html"><i class="fa fa-link"></i></a></div>
                     </div>
                     <div class="caption-box">
-                        <h3><a href="<?php echo esc_url(home_url('/blog-detail')); ?>">In Good Taste: Mark Finlay Architects & Interiors.</a></h3>
+                        <h3><a href="blog-detail.html">In Good Taste: Mark Finlay Architects & Interiors.</a></h3>
                         <ul class="info">
                             <li>06 June 2018,</li>
                             <li>John Smith</li>
@@ -561,11 +634,13 @@
             <div class="news-block col-lg-4 col-md-6 col-sm-12">
                 <div class="inner-box">
                     <div class="image-box">
-                        <figure class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/news-2.jpg" alt=""></figure>
-                        <div class="overlay-box"><a href="<?php echo esc_url(home_url('/blog-detail')); ?>"><i class="fa fa-link"></i></a></div>
+                        <figure class="image"><img
+                                src="<?php echo get_template_directory_uri()?>/assets/images/resource/news-2.jpg"
+                                alt=""></figure>
+                        <div class="overlay-box"><a href="blog-detail.html"><i class="fa fa-link"></i></a></div>
                     </div>
                     <div class="caption-box">
-                        <h3><a href="<?php echo esc_url(home_url('/blog-detail')); ?>">The Luxury Apartment of Special Interiors.</a></h3>
+                        <h3><a href="blog-detail.html">The Lexury Apartment of sepcial interiors.</a></h3>
                         <ul class="info">
                             <li>06 June 2018,</li>
                             <li>John Smith</li>
@@ -578,11 +653,13 @@
             <div class="news-block col-lg-4 col-md-6 col-sm-12">
                 <div class="inner-box">
                     <div class="image-box">
-                        <figure class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/resource/news-3.jpg" alt=""></figure>
-                        <div class="overlay-box"><a href="<?php echo esc_url(home_url('/blog-detail')); ?>"><i class="fa fa-link"></i></a></div>
+                        <figure class="image"><img
+                                src="<?php echo get_template_directory_uri()?>/assets/images/resource/news-3.jpg"
+                                alt=""></figure>
+                        <div class="overlay-box"><a href="blog-detail.html"><i class="fa fa-link"></i></a></div>
                     </div>
                     <div class="caption-box">
-                        <h3><a href="<?php echo esc_url(home_url('/blog-detail')); ?>">The Business Meeting Room Interior in the Rank.</a></h3>
+                        <h3><a href="blog-detail.html">The Business metting room interior in the rank.</a></h3>
                         <ul class="info">
                             <li>06 June 2018,</li>
                             <li>John Smith</li>
@@ -601,19 +678,60 @@
         <div class="sponsors-outer">
             <!--Sponsors Carousel-->
             <ul class="sponsors-carousel owl-carousel owl-theme">
-                <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/1.png" alt=""></a></figure></li>
-                <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/2.png" alt=""></a></figure></li>
-                <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/3.png" alt=""></a></figure></li>
-                <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/4.png" alt=""></a></figure></li>
-                <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/5.png" alt=""></a></figure></li>
-                <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/1.png" alt=""></a></figure></li>
-                <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/2.png" alt=""></a></figure></li>
-                <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/3.png" alt=""></a></figure></li>
-                <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/4.png" alt=""></a></figure></li>
-                <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/5.png" alt=""></a></figure></li>
+                <li class="slide-item">
+                    <figure class="image-box"><a href="#"><img
+                                src="<?php echo get_template_directory_uri()?>/assets/images/clients/1.png" alt=""></a>
+                    </figure>
+                </li>
+                <li class="slide-item">
+                    <figure class="image-box"><a href="#"><img
+                                src="<?php echo get_template_directory_uri()?>/assets/images/clients/2.png" alt=""></a>
+                    </figure>
+                </li>
+                <li class="slide-item">
+                    <figure class="image-box"><a href="#"><img
+                                src="<?php echo get_template_directory_uri()?>/assets/images/clients/3.png" alt=""></a>
+                    </figure>
+                </li>
+                <li class="slide-item">
+                    <figure class="image-box"><a href="#"><img
+                                src="<?php echo get_template_directory_uri()?>/assets/images/clients/4.png" alt=""></a>
+                    </figure>
+                </li>
+                <li class="slide-item">
+                    <figure class="image-box"><a href="#"><img
+                                src="<?php echo get_template_directory_uri()?>/assets/images/clients/5.png" alt=""></a>
+                    </figure>
+                </li>
+                <li class="slide-item">
+                    <figure class="image-box"><a href="#"><img
+                                src="<?php echo get_template_directory_uri()?>/assets/images/clients/1.png" alt=""></a>
+                    </figure>
+                </li>
+                <li class="slide-item">
+                    <figure class="image-box"><a href="#"><img
+                                src="<?php echo get_template_directory_uri()?>/assets/images/clients/2.png" alt=""></a>
+                    </figure>
+                </li>
+                <li class="slide-item">
+                    <figure class="image-box"><a href="#"><img
+                                src="<?php echo get_template_directory_uri()?>/assets/images/clients/3.png" alt=""></a>
+                    </figure>
+                </li>
+                <li class="slide-item">
+                    <figure class="image-box"><a href="#"><img
+                                src="<?php echo get_template_directory_uri()?>/assets/images/clients/4.png" alt=""></a>
+                    </figure>
+                </li>
+                <li class="slide-item">
+                    <figure class="image-box"><a href="#"><img
+                                src="<?php echo get_template_directory_uri()?>/assets/images/clients/5.png" alt=""></a>
+                    </figure>
+                </li>
             </ul>
         </div>
     </div>
 </section>
 <!--End Clients Section-->
+
 <?php get_footer(); ?>
