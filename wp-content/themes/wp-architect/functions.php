@@ -1,10 +1,10 @@
 <?php
 /**
- * wp-architec functions and definitions
+ * wp-architech functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package wp-architec
+ * @package wp-architech
  */
 
 if ( ! defined( 'time()' ) ) {
@@ -23,10 +23,10 @@ function wp_architec_setup() {
 	/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on wp-architec, use a find and replace
-		* to change 'wp-architec' to the name of your theme in all the template files.
+		* If you're building a theme based on wp-architech, use a find and replace
+		* to change 'wp-architech' to the name of your theme in all the template files.
 		*/
-	load_theme_textdomain( 'wp-architec', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'wp-architech', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -50,8 +50,8 @@ function wp_architec_setup() {
 	
 
 		register_nav_menus( array(
-	    	'primary_menu' => __( 'Primary Menu', 'wp-architec' ),
-	    	'support_menu'  => __( 'Support Menu', 'wp-architec' ),
+	    	'primary_menu' => __( 'Primary Menu', 'wp-architech' ),
+	    	'support_menu'  => __( 'Support Menu', 'wp-architech' ),
 		) );
 
 
@@ -125,9 +125,9 @@ add_action( 'after_setup_theme', 'wp_architec_content_width', 0 );
 function wp_architec_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'wp-architec' ),
+			'name'          => esc_html__( 'Sidebar', 'wp-architech' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'wp-architec' ),
+			'description'   => esc_html__( 'Add widgets here.', 'wp-architech' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
